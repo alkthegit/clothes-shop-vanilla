@@ -1,0 +1,313 @@
+@import './styles/common.css';
+
+
+.header {
+    background: linear-gradient(var(--gray) 0%, #fff 57% 100%);
+    /* background: linear-gradient(180deg, #d9d9d9 0%, #fff 56.56%); */
+    height: 130px;
+
+    .container {
+        width: var(--content-width);
+        height: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 2px solid var(--bordo);
+    }
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+}
+
+.header-brand__link {
+    display: inline-block;
+    margin-right: 10px;
+    background: left center / contain no-repeat url(/assets/brand.png);
+    width: 100px;
+    height: 100px;
+}
+
+.header-brand__caption {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    justify-content: center;
+}
+
+.header-brand__title {
+    font-size: 36px;
+}
+
+.header-brand__subtitle {
+    font-size: 16px;
+    color: var(--dark-bordo);
+}
+
+.header-menu {
+    display: flex;
+    column-gap: 20px;
+}
+
+.header-menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-menu-link {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+
+.header-menu__basket {
+    display: flex;
+    align-items: center;
+    background: left/32px 32px no-repeat url('/assets/icons/basket.svg');
+    font-family: "Roboto", serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--bordo);
+    width: unset;
+    padding-left: 42px;
+
+    &:hover {
+        background-image: url('/assets/icons/basket-hover.svg');
+        color: var(--dark-gray);
+    }
+
+    &[disabled] {
+        background-image: url('/assets/icons/basket-disabled.svg');
+        color: var(--gray);
+
+    }
+
+    &:focus:not([disabled]) {
+        background-image: url('/assets/icons/basket-focus.svg');
+        color: var(--bordo);
+    }
+}
+
+.header-menu__basket-total {
+    position: relative;
+    top: 2px;
+}
+
+
+.header-menu__fav {
+    background: left / contain no-repeat url('/assets/icons/fav-menu.svg');
+
+    &:hover {
+        background-image: url('/assets/icons/fav-menu-hover.svg');
+    }
+
+    &[disabled] {
+        background-image: url('/assets/icons/fav-menu-disabled.svg');
+    }
+
+    &:focus {
+        background-image: url('/assets/icons/fav-menu-focus.svg');
+    }
+}
+
+.header-menu__user {
+    background: left / contain no-repeat url('/assets/icons/user.svg');
+
+    &:hover {
+        background-image: url('/assets/icons/user-hover.svg');
+    }
+
+    &[disabled] {
+        background-image: url('/assets/icons/user-disabled.svg');
+    }
+
+    &:focus {
+        background-image: url('/assets/icons/user-focus.svg');
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin: 50px auto 0;
+    /* padding: 50px 360px 0; */
+    width: var(--content-width);
+}
+
+.section {}
+
+.section-intro {
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(90deg, #fff 0%, #fff 12%, var(--gray) 33%, var(--bordo) 33%, var(--bordo) 100%);
+    height: 600px;
+    border: 4px solid var(--bordo);
+    border-radius: 50px;
+    overflow: hidden;
+
+    user-select: none;
+}
+
+.section-intro__photo {
+    width: 33%;
+    object-fit: cover;
+    transform: rotateY(180deg);
+}
+
+.section-intro-caption {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    row-gap: 10px;
+    width: 67%;
+    padding-top: 237px;
+    padding-left: 232px;
+    padding-right: 121px;
+}
+
+.section-intro-caption__title {
+    font-size: 54px;
+}
+
+.section-intro-caption__title2 {
+    color: var(--gray);
+}
+
+.section-intro-caption__link {
+    padding-bottom: 10px;
+    color: var(--background);
+    border-bottom: 1px solid var(--background);
+    margin-left: auto;
+
+    font-family: var(--second-family);
+}
+
+.section-products {}
+
+.section-products-header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.section-products-header__title {
+    font-family: var(--second-family);
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.section-products-header__search {
+    input {
+        width: 440px;
+        height: 49px;
+        padding-left: 52px;
+        background: 10px center/ 32px 32px no-repeat url('/assets/icons/search-default.svg'),
+            linear-gradient(#fff 0%, var(--gray) 100%);
+        border: 1px solid var(--gray);
+        border-radius: 12px;
+
+        font-size: 24px;
+
+        &::placeholder {
+            color: var(--gray);
+        }
+    }
+}
+
+.section-products-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 101px;
+    row-gap: 50px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    height: 605x;
+
+
+    border: 1px solid var(--gray);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.product-card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.product-card-info {
+    padding: 20px 15px 20px 20px;
+}
+
+.product-card-brand {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-card-title {
+    font-family: var(--second-family);
+    color: var(--dark-bordo);
+    font-size: 24px;
+}
+
+.product-card-price {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.product-card-price__name {
+    display: inline-block;
+    font-family: var(--second-family), sans-serif;
+    display: inline-block;
+    font-size: 24px;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+}
+
+.product-card-price__value {
+    font-size: 36px;
+    color: #000;
+
+    &::after {
+        content: "₽";
+    }
+}
+
+.product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+}
+
+.product-card-footer-add {
+    width: 80px;
+    height: 80px;
+
+    background: left center / 80px 80px no-repeat url('/assets/icons/add.svg');
+
+    &:hover:not([disabled]) {
+        background-image: url('/assets/icons/add-hover.svg');
+    }
+
+    &:focus:not([disabled]) {
+        background-image: url('/assets/icons/add-hover.svg');
+    }
+
+    &[disabled] {
+        background-image: url('/assets/icons/add-disabled.svg');
+    }
+
+}

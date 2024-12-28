@@ -1,0 +1,12 @@
+:root {
+	--font-family: "Roboto", sans-serif;
+	--second-family: "Open Sans", sans-serif;
+	--third-family: "Inter", sans-serif;
+	--background: #e0bea2;
+	--bordo: #750000;
+	--gray: #d9d9d9;
+	--dark-bordo: #533333;
+	--green: #007505;
+	--dark-gray: #7d7d7d;
+	--content-width: 1200px;
+}
