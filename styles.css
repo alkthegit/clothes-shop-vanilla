@@ -47,24 +47,24 @@
     color: var(--dark-bordo);
 }
 
-.header-menu {
+.header__menu {
     display: flex;
     column-gap: 20px;
 }
 
-.header-menu-item {
+.header__menu-item {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.header-menu-link {
+.header__menu-link {
     display: inline-block;
     height: 32px;
     width: 32px;
 }
 
-.header-menu__basket {
+.header__menu-basket {
     display: flex;
     align-items: center;
     background: left/32px 32px no-repeat url('/assets/icons/basket.svg');
@@ -98,7 +98,7 @@
 }
 
 
-.header-menu__fav {
+.header__menu-fav {
     background: left / contain no-repeat url('/assets/icons/fav-menu.svg');
 
     &:hover {
@@ -114,7 +114,7 @@
     }
 }
 
-.header-menu__user {
+.header__menu-user {
     background: left / contain no-repeat url('/assets/icons/user.svg');
 
     &:hover {
