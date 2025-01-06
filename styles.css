@@ -115,18 +115,22 @@
 }
 
 .header__menu-user {
-    background: left / contain no-repeat url('/assets/icons/user.svg');
+    /* background: left / contain no-repeat url('/assets/icons/user.svg'); */
+        background: 0 0 / cover no-repeat url('/assets/icons/user.svg');
 
     &:hover {
-        background-image: url('/assets/icons/user-hover.svg');
+        /* background-image: url('/assets/icons/user-hover.svg'); */
+            background-position-y: -52px;
     }
-
+    
     &[disabled] {
-        background-image: url('/assets/icons/user-disabled.svg');
+        /* background-image: url('/assets/icons/user-disabled.svg'); */
+            background-position-y: -104px;
     }
-
+    
     &:focus {
-        background-image: url('/assets/icons/user-focus.svg');
+        /* background-image: url('/assets/icons/user-focus.svg'); */
+            background-position-y: -154px;
     }
 }
 
